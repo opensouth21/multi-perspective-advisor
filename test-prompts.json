@@ -1,0 +1,75 @@
+{
+  "test_prompts": [
+    {
+      "id": 1,
+      "name": "投资决策测试",
+      "prompt": "帮我多视角分析一下：我该不该现在买入英伟达股票？",
+      "expected_outputs": {
+        "min_perspectives": 4,
+        "max_perspectives": 8,
+        "must_include_cross_domain": true,
+        "checklist": [
+          "核心结论先于维度分析",
+          "至少有一个共识和一个分歧维度",
+          "明确标注跨域视角",
+          "有行动建议"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "职业规划测试",
+      "prompt": "帮我多视角分析一下：我应该考研还是直接工作？",
+      "expected_outputs": {
+        "min_perspectives": 4,
+        "max_perspectives": 8,
+        "must_include_cross_domain": true,
+        "checklist": [
+          "核心结论先于维度分析",
+          "张学峰或芒格等教育/职业视角出现",
+          "有具体的下一步行动建议"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "技术选型测试",
+      "prompt": "用多个视角判断：我应该用 React 还是 Vue 开发新项目？",
+      "expected_outputs": {
+        "min_perspectives": 4,
+        "max_perspectives": 8,
+        "must_include_cross_domain": true,
+        "checklist": [
+          "Karpathy 或马斯克等技术视角出现",
+          "至少一个跨域视角",
+          "有明确的技术选型建议"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "简单问题（应降级处理）",
+      "prompt": "什么是量子纠缠？",
+      "expected_outputs": {
+        "min_perspectives": 2,
+        "max_perspectives": 4,
+        "note": "简单 fact 查询不应强行多视角，费曼可能就够了"
+      }
+    },
+    {
+      "id": 5,
+      "name": "创业方向测试",
+      "prompt": "帮我多视角分析一下：我该如何开始我的 SaaS 创业？",
+      "expected_outputs": {
+        "min_perspectives": 4,
+        "max_perspectives": 8,
+        "must_include_cross_domain": true,
+        "checklist": [
+          "PG 或张一鸣等创业视角出现",
+          "至少一个风险/哲学视角",
+          "有 MVP 或最小验证步骤的建议"
+        ]
+      }
+    }
+  ]
+}
