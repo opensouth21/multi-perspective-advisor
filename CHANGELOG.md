@@ -1,7 +1,5 @@
 # 版本变更日志
 
-<<<<<<< HEAD
-=======
 ## [v1.2.0] - 2026-06-22
 - **重大变更**：本包变为**自包含（self-contained）**，用户无需额外安装 Perspective 即可正常使用
 - **新增**：`perspectives/` 目录，包含 15 个 Perspective 的精简版 SKILL.md（14 位大师 + 1 位 X 运营导师）
@@ -10,7 +8,6 @@
 - **新增**：激活方式方法 3 改为"模拟角色"（兜底策略）
 - **修复**：解决了之前需要用户额外安装 14 个 Perspective 才能使用的依赖问题
 
->>>>>>> 100a098 (Release v1.2.0: Self-contained with 15 bundled perspectives)
 ## [v1.1.0] - 2026-06-18
 - **新增**：首屏钩子（一句话定位 + 适合场景 + 你需要什么）
 - **新增**：兼容性声明（纯提示语文档，兼容 Claude Code、Codex、OpenCode、OpenClaw、Hermes、WorkBuddy 等）
