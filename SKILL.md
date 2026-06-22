@@ -252,10 +252,19 @@ description: |
 对每个选定的视角，激活对应的 Perspective Skill 进行分析：
 
 1. **加载 Perspective** — 按优先级尝试：
+<<<<<<< HEAD
    - (1) 已可通过 Skill 工具直接加载
    - (2) 项目目录下搜索 `<name>-perspective/SKILL.md`
    - (3) 用户常见路径：`~/.workbuddy/skills/nuwa-skill/examples/<name>-perspective/SKILL.md`
    - (4) 使用内置模拟模式（引用核心心智模型和决策启发式）
+=======
+   - (1) 本包自带的 Perspective：`<skill-dir>/perspectives/<name>.md`（**优先从此处读取**，这是打包版的核心优势）
+   - (2) 已可通过 Skill 工具直接加载
+   - (3) 用户本地路径：`~/.workbuddy/skills/nuwa-skill/examples/<name>-perspective/SKILL.md`
+   - (4) 使用内置模拟模式（引用核心心智模型和决策启发式）
+
+   **内置模拟模式**：当以上方式都无法加载 Perspective 时，使用以下精炼版本的心智模型和决策启发式来模拟该视角。
+>>>>>>> 100a098 (Release v1.2.0: Self-contained with 15 bundled perspectives)
 2. 将该视角注入到 Agent 上下文中
 3. 请每个视角以自身方式回答问题
 4. 记录每个视角的关键论点、论据、行动建议
@@ -292,7 +301,36 @@ Skill(tool: "charlie-munger-perspective")
 Skill(tool: "jony-ive-perspective")
 ```
 
+<<<<<<< HEAD
 ### 方法 2: 模拟角色
+=======
+### 方法 2: 从本包读取（打包版专用）
+
+如果是从 GitHub 下载的打包版，Perspective 文件位于 `perspectives/` 子目录下：
+
+```
+路径：<skill-dir>/perspectives/<name>.md
+```
+
+可用视角列表（对应文件名）：
+- `andrej-karpathy-perspective.md`
+- `elon-musk-perspective.md`
+- `feynman-perspective.md`
+- `ilya-sutskever-perspective.md`
+- `mrbeast-perspective.md`
+- `munger-perspective.md`
+- `naval-perspective.md`
+- `paul-graham-perspective.md`
+- `steve-jobs-perspective.md`
+- `sun-yuchen-perspective.md`
+- `taleb-perspective.md`
+- `trump-perspective.md`
+- `x-mastery-mentor.md`
+- `zhangxuefeng-perspective.md`
+- `zhang-yiming-perspective.md`
+
+### 方法 3: 模拟角色
+>>>>>>> 100a098 (Release v1.2.0: Self-contained with 15 bundled perspectives)
 
 如果某个 Perspective 无法通过 Skill 工具加载，则在 Agent 内部模拟该视角的分析风格：
 
